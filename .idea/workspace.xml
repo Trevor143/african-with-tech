@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bdce11f5-220b-4406-8b7e-e0690119b3fa" name="Default Changelist" comment="" />
+    <list default="true" id="bdce11f5-220b-4406-8b7e-e0690119b3fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Composers/FeaturedComposer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/blog/article.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/blog/tag.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/blog/user.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/backpack/crud/buttons/admin_preview.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/backpack/preview.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/BackpackUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BackpackUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/layout/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/layout/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/partials/featured.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/partials/featured.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/partials/home_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/partials/home_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/partials/posts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/partials/posts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/backpack/base/my_account.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/backpack/base/my_account.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/backpack/custom.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/backpack/custom.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +64,16 @@
       <list>
         <option value="Blade" />
       </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\Projects\awtblog\.idea" />
+      </set>
     </option>
   </component>
   <component name="PackageJsonUpdateNotifier">
@@ -161,7 +199,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1YTGvVlgAy5DlKJpt7XlR9M1Ge3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/blog/partials" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -217,11 +257,27 @@
       <workItem from="1583133332218" duration="8107000" />
       <workItem from="1583156845046" duration="36796000" />
       <workItem from="1583290595306" duration="21697000" />
+      <workItem from="1583385672445" duration="8209000" />
+      <workItem from="1583394881460" duration="16659000" />
+      <workItem from="1584018506162" duration="26789000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

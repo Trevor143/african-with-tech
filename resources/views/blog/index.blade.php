@@ -8,5 +8,7 @@
 {{--@endsection--}}
 
 @section('content')
-    @include('blog.partials.posts')
+    <section class="s-content">
+        @include('blog.partials.posts',['articles'=>$articles])
+    </section>
 @endsection

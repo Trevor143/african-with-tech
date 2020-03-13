@@ -55,9 +55,18 @@ return [
             'visibility' => 'public',
         ],
 
+        'front' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public'),
+            'url' => '/',
+            'visibility' => 'public',
+        ],
+
         'backpack' => [
             'driver' => 'local',
-            'root' => public_path('admin'),
+            'root' => storage_path('app/public/admin'),
+            'url' => '/admin',
+            'visibility' => 'public',
         ],
 
         's3' => [

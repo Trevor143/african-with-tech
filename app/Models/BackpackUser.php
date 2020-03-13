@@ -62,4 +62,14 @@ class BackpackUser extends User
         return $this->hasMany(UserSocials::class);
 
     }
+
+    public function articles()
+    {
+        return $this->hasMany('App\Article');
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'name';
+    }
 }

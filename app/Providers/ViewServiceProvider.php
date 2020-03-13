@@ -2,16 +2,14 @@
 
 namespace App\Providers;
 
-use App\Article;
 use App\Http\Composers\FeaturedComposer;
-use Backpack\MenuCRUD\app\Models\MenuItem;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
-class AppServiceProvider extends ServiceProvider
+class ViewServiceProvider extends ServiceProvider
 {
     /**
-     * Register any application services.
+     * Register services.
      *
      * @return void
      */
@@ -21,12 +19,12 @@ class AppServiceProvider extends ServiceProvider
     }
 
     /**
-     * Bootstrap any application services.
+     * Bootstrap services.
      *
      * @return void
      */
     public function boot()
     {
-        View::share('items', MenuItem::all());
+        View::composer(['blog.partials.featured'], FeaturedComposer::class);
     }
 }

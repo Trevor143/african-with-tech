@@ -62,7 +62,7 @@
                     <div class="card-body backpack-profile-form bold-labels">
                         <div class="row">
                             <div class="col-md-6 form-group">
-                                <img class="img-fluid" src="{{asset('admin/'.$image)}}" alt="">
+                                <img class="img-fluid" src="{{Storage::disk('backpack')->url(backpack_user()->image->imageable_url)}}" alt="">
                                 <br>
                                 <input type="file" class="form-group py-3" name="image" value="Change Profile Picture">
                             </div>

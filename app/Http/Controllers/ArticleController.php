@@ -22,12 +22,19 @@ class ArticleController extends ArticleCrudController
         $this->crud->setRoute(config('backpack.base.route_prefix', 'admin').'/article');
         $this->crud->setEntityNameStrings('article', 'articles');
 
+        $this->crud->addButtonFromView('line', 'admin_preview', 'admin_preview', 'beginning');
+
+//        $this->crud->removeButton( 'clone' );
+//        $this->crud->removeAllButtons();
+
         /*
         |--------------------------------------------------------------------------
         | LIST OPERATION
         |--------------------------------------------------------------------------
         */
         $this->crud->operation('list', function () {
+            $this->crud->removeButtonFromStack('show', 'line');
+
             $this->crud->addColumn('title');
             $this->crud->addColumn('description');
             $this->crud->addColumn([
@@ -146,6 +153,12 @@ class ArticleController extends ArticleCrudController
                 'label' => 'Featured item',
                 'type' => 'checkbox',
             ]);
+
+            $this->crud->addField([
+                'name' => 'user_id',
+                'type'=> 'hidden',
+                'value'=> backpack_user()->id,
+            ]);
         });
     }
 
@@ -236,54 +249,10 @@ class ArticleController extends ArticleCrudController
         }
     }
 
+    public function preview(Article $article)
+    {
+        return view('vendor.backpack.preview', compact('article'));
+    }
+
 }
 
-
-
-
-
-
-//if ($post_type == 0){
-//    $normal = Article::findBySlug($article->slug);
-//    $normal->post_type = $post_type;
-//    $normal->update(['post_type'=> $post_type]);
-//}
-//elseif ($post_type == 1){
-//    $current_main = Article::where('post_type', $post_type);
-//    if ($current_main){
-////                $current_main->post_type = 0;
-//        $current_main->update(['post_type'=> 0]);
-//        $new_main = Article::findBySlug($article->slug);
-//        $new_main->post_type = $post_type;
-//        $new_main->update(['post_type'=> $post_type]);
-//    }
-//    $new_main = Article::findBySlug($article->slug);
-//    $new_main->post_type = $post_type;
-//    $new_main->update(['post_type'=> $post_type]);
-//}
-//elseif ($post_type == 2){
-//    $current_up = Article::where('post_type', $post_type);
-//    if ($current_up){
-////                $current_up->post_type = 0;
-//        $current_up->update(['post_type'=> 0]);
-//        $new_up = Article::findBySlug($article->slug);
-//        $new_up->post_type = $post_type;
-//        $new_up->update(['post_type'=> $post_type]);
-//    }
-//    $new_up = Article::findBySlug($article->slug);
-//    $new_up->post_type = $post_type;
-//    $new_up->update(['post_type'=> $post_type]);
-//}
-//elseif ($post_type == 3){
-//    $current_down = Article::where('post_type', $post_type);
-//    if ($current_down){
-////                $current_down->post_type = 0;
-//        $current_down->update(['post_type'=> 0]);
-//        $new_down = Article::findBySlug($article->slug);
-//        $new_down->post_type = $post_type;
-//        $new_down->update(['post_type'=> $post_type]);
-//    }
-//    $new_down = Article::findBySlug($article->slug);
-//    $new_down->post_type = $post_type;
-//    $new_down->update(['post_type'=> $post_type]);
-//}

@@ -41,9 +41,9 @@
 
     <!-- s-content
     ================================================== -->
-    <section class="s-content">
+{{--    <section class="s-content">--}}
         @yield('content')
-    </section>
+{{--    </section>--}}
     <!-- s-content -->
 
 

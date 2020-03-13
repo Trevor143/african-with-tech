@@ -10,4 +10,9 @@ class Category extends \Backpack\NewsCRUD\app\Models\Category
     {
         return $this->belongsToMany('Backpack\NewsCRUD\app\Models\Article', 'article_category');
     }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

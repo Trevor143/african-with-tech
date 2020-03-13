@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\Category;
+use App\Models\BackpackUser;
 use App\Tag;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\View;
 
 class BlogController extends Controller
 {
@@ -17,23 +18,36 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $home = 0;
-        $articles = Article::all();
-        $main_article = Article::where('post_type', 0)->first();
-        $up_article = Article::where('post_type', 1)->first();
-        $down_article = Article::where('post_type', 2)->first();
-        $tags = Tag::all();
+        $articles = Article::where('status', 'PUBLISHED')->get();
 
-//        dd($home);
-
-        return view('blog.index');
+        return view('blog.index')->with('articles', $articles);
     }
 
-    public function category()
+    public function category(Category $category)
     {
-        return view('blog.category');
+        return view('blog.category')
+            ->with('articles', $category->articles->where('status','PUBLISHED'))
+            ->with('category', $category);
 
     }
+
+    public function tag(Tag $tag)
+    {
+        return view('blog.category')
+            ->with('articles', $tag->articles->where('status','PUBLISHED'))
+            ->with('tag', $tag);
+
+    }
+
+    public function user(BackpackUser $user)
+    {
+        return view('blog.user')
+            ->with('articles', $user->articles->where('status','PUBLISHED'))
+            ->with('user', $user);
+
+    }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -59,12 +73,12 @@ class BlogController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param Article $article
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Article $article)
     {
-        //
+        return view('blog.article', compact('article'));
     }
 
     /**

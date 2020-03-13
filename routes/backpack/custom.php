@@ -13,6 +13,8 @@ Route::group([
 ], function () { // custom admin routes
     Route::post('socials.store', 'UserSocialsController@store')->name('socials');
 
+    Route::get('article/{article}/preview', 'ArticleController@preview');
+
     Route::get('socials', function (){
         return backpack_user()->social[0]['social_name'];
     });
