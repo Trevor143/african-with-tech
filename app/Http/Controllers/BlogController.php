@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\URL;
 
 class BlogController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      *
@@ -25,37 +24,51 @@ class BlogController extends Controller
         $articles = Article::where('status', 'PUBLISHED')->orderBy('created_at', 'desc')->get();
 
         SEOMeta::setTitle('Home');
-        SEOMeta::setDescription('This is my page description');
         SEOMeta::setCanonical(Url::current());
 
         return view('blog.index')->with('articles', $articles);
     }
 
+    /**
+     * Display a listing of the category.
+     *
+     * @param Category $category
+     * @return \Illuminate\Http\Response
+     */
     public function category(Category $category)
     {
         $this->generalSEO($category);
         return view('blog.category')
             ->with('articles', $category->articles->where('status','PUBLISHED')->sortByDesc('created_at'))
             ->with('category', $category);
-
     }
 
+    /**
+     * Display a listing of the tags.
+     *
+     * @param Tag $tag
+     * @return \Illuminate\Http\Response
+     */
     public function tag(Tag $tag)
     {
         $this->generalSEO($tag);
         return view('blog.category')
             ->with('articles', $tag->articles->where('status','PUBLISHED')->sortByDesc('created_at'))
             ->with('tag', $tag);
-
     }
 
+    /**
+     * Display a listing of the user.
+     *
+     * @param BackpackUser $user
+     * @return \Illuminate\Http\Response
+     */
     public function user(BackpackUser $user)
     {
         $this->generalSEO($user);
         return view('blog.user')
             ->with('articles', $user->articles->where('status','PUBLISHED')->sortByDesc('created_at'))
             ->with('user', $user);
-
     }
 
     /**
@@ -76,7 +89,6 @@ class BlogController extends Controller
         SEOMeta::setDescription($article->description);
         SEOMeta::setCanonical(Url::current());
         SEOMeta::addMeta('article:published_time', $article->created_at->toW3CString(), 'property');
-//        SEOMeta::addMeta('article:section', $article->category, 'property');
         SEOMeta::addMeta('article:author', $article->user->name, 'property');
         if ($article->tags)
             SEOMeta::addKeyword($article->tags->map(function ($tag){return $tag->name;})->toArray());
@@ -93,7 +105,6 @@ class BlogController extends Controller
         TwitterCard::setUrl(Url::current());
         if ($article->image)
             TwitterCard::addImage(\url($article->image));
-
         TwitterCard::setSite('@Mukwz');
     }
 
@@ -108,6 +119,5 @@ class BlogController extends Controller
 
         TwitterCard::setTitle($entity->name);
         TwitterCard::setUrl(Url::current());
-
     }
 }

@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdce11f5-220b-4406-8b7e-e0690119b3fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/user_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/backpack/settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/awtblog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/awtblog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/BackpackUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BackpackUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/backpack/base.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/backpack/base.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blog/article.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/article.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blog/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/category.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blog/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blog/layout/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/layout/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blog/partials/posts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/partials/posts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blog/tag.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/tag.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blog/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/user.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/backpack/base/inc/sidebar_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/backpack/base/inc/sidebar_content.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/backpack/preview.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/backpack/preview.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -260,7 +239,7 @@
       <workItem from="1584018506162" duration="27599000" />
       <workItem from="1584168800031" duration="2927000" />
       <workItem from="1584452854072" duration="78000" />
-      <workItem from="1584689221916" duration="24809000" />
+      <workItem from="1584689221916" duration="25955000" />
     </task>
     <servers />
   </component>
