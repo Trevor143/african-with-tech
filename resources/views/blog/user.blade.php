@@ -36,4 +36,7 @@
     </section>
 @endsection
 
+@section('seo')
+    {!! SEO::generate() !!}
 
+@endsection

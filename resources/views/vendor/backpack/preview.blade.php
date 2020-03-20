@@ -46,8 +46,7 @@
                                 <a href="#0">{{$tag->name}}</a>
                             @endforeach
                     </span>
-                    </p>
-            @endif
+                    </p>@endif
             <!-- end s-content__tags -->
 
                 <div class="s-content__author">

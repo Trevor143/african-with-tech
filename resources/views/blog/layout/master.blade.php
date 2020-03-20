@@ -5,9 +5,8 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>About - Philosophy</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+
+    @yield('seo')
 
     <!-- mobile specific metas
     ================================================== -->
@@ -49,7 +48,7 @@
 
     <!-- s-extra
     ================================================== -->
-        @include('blog.partials.extra')
+{{--        @include('blog.partials.extra')--}}
     <!-- end s-extra -->
 
 

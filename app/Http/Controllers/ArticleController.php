@@ -23,9 +23,8 @@ class ArticleController extends ArticleCrudController
         $this->crud->setEntityNameStrings('article', 'articles');
 
         $this->crud->addButtonFromView('line', 'admin_preview', 'admin_preview', 'beginning');
-
-//        $this->crud->removeButton( 'clone' );
-//        $this->crud->removeAllButtons();
+        if (!backpack_user()->can('view_all_articles'))
+            $this->crud->addClause('where','user_id','=', backpack_user()->id);
 
         /*
         |--------------------------------------------------------------------------
@@ -33,8 +32,18 @@ class ArticleController extends ArticleCrudController
         |--------------------------------------------------------------------------
         */
         $this->crud->operation('list', function () {
+            $this->crud->removeButtonFromStack('clone', 'line');
             $this->crud->removeButtonFromStack('show', 'line');
 
+            $this->crud->addColumn([
+
+                'label' => 'Author',
+                'type' => 'select',
+                'name' => 'user_id',
+                'entity' => 'user',
+                'attribute' => 'name',
+//                'model' => 'App\Models\BackpackUser'
+            ]);
             $this->crud->addColumn('title');
             $this->crud->addColumn('description');
             $this->crud->addColumn([
@@ -135,19 +144,23 @@ class ArticleController extends ArticleCrudController
                 'label' => 'Status',
                 'type' => 'enum',
             ]);
-            $this->crud->addField([
-                'name' => 'post_type',
-                'label' => 'Post Type',
-                'type' => 'radio',
-                'options'     => [
-                    // the key will be stored in the db, the value will be shown as label;
-                    0 => "Normal",
-                    1 => "Main Post",
-                    2 => "Post up",
-                    3 => "Post down"
-                ],
-                'inline'      => true,
-            ]);
+
+            if (backpack_user()->can('make important')){
+                $this->crud->addField([
+                    'name' => 'post_type',
+                    'label' => 'Post Type',
+                    'type' => 'radio',
+                    'options'     => [
+                        // the key will be stored in the db, the value will be shown as label;
+                        0 => "Normal",
+                        1 => "Main Post",
+                        2 => "Post up",
+                        3 => "Post down"
+                    ],
+                    'inline'      => true,
+                ]);
+            }
+
             $this->crud->addField([
                 'name' => 'featured',
                 'label' => 'Featured item',

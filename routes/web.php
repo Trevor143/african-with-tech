@@ -28,9 +28,10 @@ Route::get('/tag/{tag}', 'BlogController@tag')->name('tag');
 Route::get('/user/{user}', 'BlogController@user')->name('user');
 
 Route::get('main', function (){
-   $articles =  \App\Article::find(1);
 
-   dd(\Illuminate\Support\Facades\Storage::disk('backpack')->get($articles->user->image->imageable_url));
-//   dd(($articles->image));
+    $article = \App\Article::find(14);
+    $articles = \App\Article::all();
+    $tags = $article->tags->map(function ($tag){return $tag->name;})->toArray();
+       dd($tags );
 });
 
