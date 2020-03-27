@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdce11f5-220b-4406-8b7e-e0690119b3fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/docker/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/nginx/default-example.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/awtblog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/awtblog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
@@ -252,7 +255,7 @@
       <workItem from="1584168800031" duration="2927000" />
       <workItem from="1584452854072" duration="78000" />
       <workItem from="1584689221916" duration="25955000" />
-      <workItem from="1585295332722" duration="4802000" />
+      <workItem from="1585295332722" duration="5061000" />
     </task>
     <servers />
   </component>
