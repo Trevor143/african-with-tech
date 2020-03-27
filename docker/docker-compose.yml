@@ -1,0 +1,100 @@
+version: '3'
+
+networks:
+  awtnet:
+
+services:
+  nginx:
+    image: nginx:stable-alpine
+    container_name: awtweb
+    ports:
+      - "80:80"
+    volumes:
+      - ../:/var/www/html
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
+      - mysql
+    networks:
+      - awtnet
+
+  mysql:
+    image: mysql:5.7.29
+    container_name: awtmysql
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "4306:3306"
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: homestead
+      MYSQL_USER: homestead
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: secret
+      SERVICE_TAG: dev
+      SERVICE_NAME: mysql
+    networks:
+      - awtnet
+
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: awtphp
+    volumes:
+      - ../:/var/www/html
+    ports:
+      - "9000:9000"
+    networks:
+      - awtnet
+
+  composer:
+    image: composer:1.10.1
+    container_name: composer
+    volumes:
+      - ../:/var/www/html
+    working_dir: /var/www/html
+    depends_on:
+      - php
+    networks:
+      - awtnet
+
+  npm:
+    image: node:13.7
+    container_name: npm
+    volumes:
+      - ../:/var/www/html
+    entrypoint: ['npm']
+    working_dir: /var/www/html
+    networks:
+      - awtnet
+
+  artisan:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: artisan
+    volumes:
+      - ../:/var/www/html
+    depends_on:
+      - mysql
+    working_dir: /var/www/html
+    entrypoint: ['/var/www/html/artisan']
+    networks:
+      - awtnet
+
+  # phpmyadmin
+  phpmyadmin:
+    container_name: phpmyadmin
+    depends_on:
+      - mysql
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - '9091:80'
+    environment:
+      PMA_HOST: mysql
+      MYSQL_ROOT_PASSWORD: secret
+    networks:
+      - awtnet
