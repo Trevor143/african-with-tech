@@ -13,3 +13,4 @@ yarn-error.log
 /docker/mysql/*
 !/docker/mysql/mysql.txt
 /docker/nginx/default.conf
+.idea/

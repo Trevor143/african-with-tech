@@ -31,7 +31,7 @@
                 <h2 class="header__nav-heading h6">Site Navigation</h2>
 
                 <ul class="header__nav">
-                    @foreach($items as $item)
+                    @forelse($items as $item)
                         @php
                             $isActive = null;
                             $hasChildren = null;
@@ -63,7 +63,9 @@
                                 @endif
                             </li>
                         @endif
-                    @endforeach
+                    @empty
+                        <li class="current"><a href="{{route('home')}}">Home</a></li>
+                    @endforelse
                 </ul> <!-- end header__nav -->
 
                 <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
