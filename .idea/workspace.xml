@@ -2,11 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdce11f5-220b-4406-8b7e-e0690119b3fa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/wheel-2000.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/blog/partials/default_featured.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/blog/partials/featured_posts.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/blog/partials/main_menu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/seotools.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/seotools.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/article.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/article.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/layout/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/layout/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/partials/featured.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/partials/featured.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/partials/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/blog/partials/home_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/partials/home_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blog/partials/posts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/partials/posts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/tag.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/tag.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/user.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -193,7 +206,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docker/nginx" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -205,12 +218,15 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\awtblog\public\blog" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Projects\awtblog\docker\nginx" />
       <recent name="D:\Projects\awtblog\public" />
+      <recent name="D:\Projects\awtblog\public\blog" />
+      <recent name="D:\Projects\awtblog\docker\nginx" />
       <recent name="D:\Projects\awtblog\routes\backpack" />
       <recent name="D:\Projects\awtblog\resources\views\blog\partials" />
-      <recent name="D:\Projects\awtblog\app\Providers" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -257,6 +273,8 @@
       <workItem from="1585395666316" duration="35000" />
       <workItem from="1585474451837" duration="33000" />
       <workItem from="1585478395880" duration="385000" />
+      <workItem from="1585642610284" duration="100000" />
+      <workItem from="1585744143024" duration="14696000" />
     </task>
     <servers />
   </component>

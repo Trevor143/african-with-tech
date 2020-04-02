@@ -9,8 +9,3 @@
         @include('blog.partials.posts',['articles'=>$articles])
     </section>
 @endsection
-
-@section('seo')
-    {!! SEO::generate() !!}
-
-@endsection

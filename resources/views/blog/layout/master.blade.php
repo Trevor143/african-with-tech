@@ -6,7 +6,7 @@
     ================================================== -->
     <meta charset="utf-8">
 
-    @yield('seo')
+    {!! SEO::generate() !!}
 
     <!-- mobile specific metas
     ================================================== -->
@@ -25,8 +25,8 @@
 
     <!-- favicons
     ================================================== -->
-    <link rel="shortcut icon" href="{{asset('blog/favicon.ico')}}" type="image/x-icon">
-    <link rel="icon" href="{{asset('blog/favicon.ico')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{asset('blog/favicon1.png')}}" type="image/x-icon">
+    <link rel="icon" href="{{asset('blog/favicon1.png')}}" type="image/x-icon">
 
 </head>
 

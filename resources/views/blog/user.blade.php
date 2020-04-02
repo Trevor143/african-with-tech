@@ -9,13 +9,17 @@
         <div class="row narrow">
             <div class="col-full s-content__header" data-aos="fade-up">
                 {{--<div class="s-content__author">--}}
-                <img src="{{Storage::disk('backpack')->url($user->image->imageable_url)}}" alt="{{$user->name}}'s image">
-                <div class="s-content__author-about">
-                    <h4 class="s-content__author-name">
+                @if($user->image)
+                    <img src="{{Storage::disk('backpack')->url($user->image->imageable_url)}}" alt="{{$user->name}}'s image">
+                @else
+                    <img src="{{ asset('user_icon.png') }}" alt="{{$user->name}}'s image" width="200" height="40">
+                @endif
+                    <div class="s-content__author-about">
+                    <h2 class="s-content__author-name">
                         {{$user->name}}
-                    </h4>
+                    </h2>
 
-                    <p>
+                    <p class="lead">
                         {{$user->description}}
                     </p>
 
@@ -34,9 +38,4 @@
 
         @include('blog.partials.posts',['articles'=>$articles])
     </section>
-@endsection
-
-@section('seo')
-    {!! SEO::generate() !!}
-
 @endsection

@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\TwitterCard;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\URL;
 
 class BlogController extends Controller
@@ -24,6 +25,7 @@ class BlogController extends Controller
         $articles = Article::where('status', 'PUBLISHED')->orderBy('created_at', 'desc')->get();
 
         SEOMeta::setTitle('Home');
+        SEOMeta::setDescription('Know it even when it doesnt help');
         SEOMeta::setCanonical(Url::current());
 
         return view('blog.index')->with('articles', $articles);
@@ -80,7 +82,9 @@ class BlogController extends Controller
     public function show(Article $article)
     {
         $this->articleSEO($article);
-        return view('blog.article', compact('article'));
+        $previous = Article::where('id', '<', $article->id)->orderBy('id','desc')->first();
+        $next = Article::where('id', '>', $article->id)->orderBy('id')->first();
+        return view('blog.article', compact('article', 'previous', 'next'));
     }
 
     public function articleSEO($article)
@@ -99,12 +103,18 @@ class BlogController extends Controller
         OpenGraph::addProperty('type', 'article');
         if ($article->image)
             OpenGraph::addImage(\url($article->image));
+        else
+            OpenGraph::addImage(asset('logo.png'));
+
 
         TwitterCard::setDescription($article->description);
         TwitterCard::setTitle($article->title);
         TwitterCard::setUrl(Url::current());
+        TwitterCard::setType('article');
         if ($article->image)
             TwitterCard::addImage(\url($article->image));
+        else
+            TwitterCard::addImage(asset('logo.png'));
         TwitterCard::setSite('@Mukwz');
     }
 
@@ -116,6 +126,12 @@ class BlogController extends Controller
         OpenGraph::setTitle($entity->name);
         OpenGraph::setUrl(Url::current());
         OpenGraph::addProperty('type', 'website');
+        if ($entity->image)
+            OpenGraph::addImage(\url(Storage::disk('backpack')->url($entity->image->imageable_url)));
+        else
+            OpenGraph::addImage(asset('logo.png'));
+
+
 
         TwitterCard::setTitle($entity->name);
         TwitterCard::setUrl(Url::current());

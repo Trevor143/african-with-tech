@@ -1,9 +1,5 @@
 @extends('blog.layout.master')
 
-@section('seo')
-    {!! SEO::generate() !!}
-@endsection
-
 @section('header')
     @include('blog.partials.header')
 @endsection
@@ -58,7 +54,7 @@
 
                 <div class="s-content__author">
                     @if($article->user->image)
-                        <img src="{{Storage::disk('backpack')->url($article->user->image->imageable_url)}}-" alt="{{$article->user->name}}'s picture">
+                        <img src="{{Storage::disk('backpack')->url($article->user->image->imageable_url)}}" alt="{{$article->user->name}}'s picture">
                     @else
                         <img src="{{asset('user_icon.png')}}" alt="{{$article->user->name}}'s picture">
                     @endif
@@ -83,18 +79,22 @@
 
                 <div class="s-content__pagenav">
                     <div class="s-content__nav">
-                        <div class="s-content__prev">
-                            <a href="#0" rel="prev">
-                                <span>Previous Post</span>
-                                Tips on Minimalist Design
-                            </a>
-                        </div>
-                        <div class="s-content__next">
-                            <a href="#0" rel="next">
-                                <span>Next Post</span>
-                                Less Is More
-                            </a>
-                        </div>
+                        @if(isset($previous))
+                            <div class="s-content__prev">
+                                <a href="{{route('article.show', $previous->slug)}}" rel="prev">
+                                    <span>Previous Post</span>
+                                    {{$previous->title}}
+                                </a>
+                            </div>
+                        @endif
+                        @if(isset($next))
+                            <div class="s-content__next">
+                                <a href="{{route('article.show', $next->slug)}}" rel="next">
+                                    <span>Next Post</span>
+                                    {{$next->title}}
+                                </a>
+                            </div>
+                        @endif
                     </div>
                 </div> <!-- end s-content__pagenav -->
 
