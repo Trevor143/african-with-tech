@@ -12,6 +12,7 @@
 */
 
 use App\Category;
+use Illuminate\Support\Facades\Storage;
 
 Route::get('/', function () {
     return view('welcome');
@@ -28,10 +29,10 @@ Route::get('/tag/{tag}', 'BlogController@tag')->name('tag');
 Route::get('/user/{user}', 'BlogController@user')->name('user');
 
 Route::get('main', function (){
+//    dd(Storage::disk('trial')->url(backpack_user()->image->imageable_url));
+    $image = backpack_user()->image->imageable_url;
+    return view('main', compact('image'));
+//    dd(storage_path('app\public\trial'));
 
-    $article = \App\Article::find(14);
-    $articles = \App\Article::all();
-    $tags = $article->tags->map(function ($tag){return $tag->name;})->toArray();
-       dd($tags );
 });
 

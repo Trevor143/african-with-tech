@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Image;
 use Backpack\CRUD\app\Http\Requests\AccountInfoRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -21,29 +22,30 @@ class MyAccountController extends \Backpack\CRUD\app\Http\Controllers\MyAccountC
         if (backpack_user()->image)
             $this->data['image'] = backpack_user()->image->imageable_url;
         else
-            $this->data['image'] = '6.png';
+            $this->data['image'] = 'user_icon.png';
 
         $this->data['socials'] = backpack_user()->social;
-//        dd($this->data['image']);
+
         return view(backpack_view('my_account'), $this->data);
     }
 
     /**
-     * Save the modified personal information for a user.
+     * Save the modified personal information for a user.we
      */
     public function postAccountInfoForm(AccountInfoRequest $request)
     {
         $result = $this->guard()->user()->update($request->except(['_token']));
 
         if (request()->hasFile('image')){
-//            dd(request()->image);
             request()->validate([
                 'image'=>'file|image|max:5000',
             ]);
-//            $url = \request()->file('image')->storeAs('public/profile', backpack_user()->name.'-picture');
-            $url = request()->image->store('uploads/profile_picture', 'backpack');
+            if (backpack_user()->image){
+                Storage::disk('public')->delete(backpack_user()->image->imageable_url);
+                Image::destroy(backpack_user()->image->id);
+            }
+            $url = request()->image->store('profile_picture', 'public');
             backpack_user()->image()->create(['imageable_url'=>$url]);
-            dd($url);
         }
 
         backpack_user()->description = $request->description ;
@@ -57,13 +59,5 @@ class MyAccountController extends \Backpack\CRUD\app\Http\Controllers\MyAccountC
 
         return redirect()->back();
     }
-
-//    public function storeImage($customer){
-//        if (\request()->has('image')){
-//            $customer->update([
-//                'image'= request()->image->store('profile_picture','publicuploads')
-//            ]);
-//        }
-//    }
 
 }

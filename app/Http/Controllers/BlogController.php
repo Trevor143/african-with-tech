@@ -127,11 +127,9 @@ class BlogController extends Controller
         OpenGraph::setUrl(Url::current());
         OpenGraph::addProperty('type', 'website');
         if ($entity->image)
-            OpenGraph::addImage(\url(Storage::disk('backpack')->url($entity->image->imageable_url)));
+            OpenGraph::addImage(asset('storage/'.$entity->image->imageable_url));
         else
             OpenGraph::addImage(asset('logo.png'));
-
-
 
         TwitterCard::setTitle($entity->name);
         TwitterCard::setUrl(Url::current());

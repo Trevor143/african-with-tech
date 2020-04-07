@@ -54,7 +54,7 @@
 
                 <div class="s-content__author">
                     @if($article->user->image)
-                        <img src="{{Storage::disk('backpack')->url($article->user->image->imageable_url)}}" alt="{{$article->user->name}}'s picture">
+                        <img src="{{asset('storage/'.$article->user->image->imageable_url)}}" alt="{{$article->user->name}}'s picture">
                     @else
                         <img src="{{asset('user_icon.png')}}" alt="{{$article->user->name}}'s picture">
                     @endif

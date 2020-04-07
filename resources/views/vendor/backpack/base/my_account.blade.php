@@ -62,7 +62,11 @@
                     <div class="card-body backpack-profile-form bold-labels">
                         <div class="row">
                             <div class="col-md-6 form-group">
-                                <img class="img-fluid" src="{{Storage::disk('backpack')->url(backpack_user()->image->imageable_url)}}" alt="">
+                                @if(backpack_user()->image)
+                                    <img class="img-fluid" src="{{asset('storage/'.backpack_user()->image->imageable_url)}}" alt="Your Picture">
+                                @else
+                                    <img class="img-fluid" src="{{asset('user_icon.png')}}" alt="No User Picture" height="40" width="200">
+                                @endif
                                 <br>
                                 <input type="file" class="form-group py-3" name="image" value="Change Profile Picture">
                             </div>
@@ -105,41 +109,41 @@
         </div>
         {{--User Account Socials   --}}
         <div class="col-lg-4">
-                {!! csrf_field() !!}
+            {!! csrf_field() !!}
 
-                <div class="card padding-10">
-                    <div class="card-header">
-                        Account Socials
-                    </div>
-
-                    <div class="table-responsive">
-                        <form method="post" id="dynamic_form">
-                            <span id="result"></span>
-                            <table class="table table-bordered table-striped" id="user_table">
-                                <thead>
-                                <tr>
-                                    <th width="35%">Site</th>
-                                    <th width="35%">URL</th>
-                                    <th width="30%">Action</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-
-                                </tbody>
-                                <tfoot>
-                                <tr>
-                                    <td colspan="2" align="right">&nbsp;</td>
-                                    <td>
-                                        @csrf
-                                        <input type="submit" name="save" id="save" class="btn btn-primary" value="Save" />
-                                    </td>
-                                </tr>
-                                </tfoot>
-                            </table>
-                        </form>
-                    </div>
-
+            <div class="card padding-10">
+                <div class="card-header">
+                    Account Socials
                 </div>
+
+                <div class="table-responsive">
+                    <form method="post" id="dynamic_form">
+                        <span id="result"></span>
+                        <table class="table table-bordered table-striped" id="user_table">
+                            <thead>
+                            <tr>
+                                <th width="35%">Site</th>
+                                <th width="35%">URL</th>
+                                <th width="30%">Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td colspan="2" align="right">&nbsp;</td>
+                                <td>
+                                    @csrf
+                                    <input type="submit" name="save" id="save" class="btn btn-primary" value="Save" />
+                                </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </form>
+                </div>
+
+            </div>
 
         </div>
         {{-- CHANGE PASSWORD FORM --}}
@@ -212,9 +216,9 @@
             {
                 @foreach($socials as $social)
                     html = '<tr>';
-{{--                @for($count = 1; $count < count($socials); $count++)--}}
+                {{--                @for($count = 1; $count < count($socials); $count++)--}}
                     html += '<td><input type="text" value="{{$social->social_name}}" name="social_name[]" class="form-control" /></td>';
-                    html += '<td><input type="text" value="{{$social->social_url}}" name="social_url[]" class="form-control" /></td>';
+                html += '<td><input type="text" value="{{$social->social_url}}" name="social_url[]" class="form-control" /></td>';
                 if(number > 1)
                 {
                     html += '<td><button type="button" name="remove" id="" class="btn btn-danger remove">Remove</button></td></tr>';

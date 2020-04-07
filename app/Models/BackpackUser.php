@@ -9,6 +9,7 @@ use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Backpack\CRUD\app\Models\Traits\InheritsRelationsFromParentModel;
 use Backpack\CRUD\app\Notifications\ResetPasswordNotification as ResetPasswordNotification;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Storage;
 
 class BackpackUser extends User
 {
@@ -51,12 +52,12 @@ class BackpackUser extends User
 
     public function getUserPictureAttribute(){
         if (backpack_user()->image){
-            $url = config('APP_URL');
-            $image = backpack_user()->image->imageable_url;
+//            $url = config('APP_URL');
+            $image = asset('storage/'.backpack_user()->image->imageable_url);
             return $image;
         }
         else
-            return 'uploads/6.png';
+            return asset('user_icon.png');
     }
 
     public function social()

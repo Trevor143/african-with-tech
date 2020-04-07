@@ -28,6 +28,8 @@
     <link rel="shortcut icon" href="{{asset('blog/favicon1.png')}}" type="image/x-icon">
     <link rel="icon" href="{{asset('blog/favicon1.png')}}" type="image/x-icon">
 
+    @yield('styles')
+
 </head>
 
 <body id="top">
@@ -78,6 +80,8 @@
     <script src="{{asset('blog/js/jquery-3.2.1.min.js')}}"></script>
     <script src="{{asset('blog/js/plugins.js')}}"></script>
     <script src="{{asset('blog/js/main.js')}}"></script>
+
+@yield('script')
 
 </body>
 
