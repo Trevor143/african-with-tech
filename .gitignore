@@ -15,3 +15,4 @@ yarn-error.log
 !/docker/mysql/mysql.txt
 /docker/nginx/default.conf
 .idea/
+storage/app/analytics/african-with-tech-production-32aedc31c3da.json

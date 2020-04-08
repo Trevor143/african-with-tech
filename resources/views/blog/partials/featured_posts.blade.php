@@ -12,7 +12,7 @@
         <div class="entry__info">
             @if($article->user->image)
                 <a href="{{route('user', $article->user->name)}}" class="entry__profile-pic">
-                    <img class="avatar" src="{{asset('storage/'.backpack_user()->image->imageable_url)}}" alt="{{$article->user->name}}'s picture">
+                    <img class="avatar" src="{{asset('storage/'.$article->user->image->imageable_url)}}" alt="{{$article->user->name}}'s picture">
 {{--                    <img class="avatar" src="{{asset("storage/trial/profile_picture/Frd2rDxfTWr3DiZmihjP49hlIsRLZMtW4joictCQ.jpeg")}}" alt="{{$article->user->name}}'s picture">--}}
                 </a>
             @endif

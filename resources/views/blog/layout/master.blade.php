@@ -6,12 +6,21 @@
     ================================================== -->
     <meta charset="utf-8">
 
-    {!! SEO::generate() !!}
+{!! SEO::generate() !!}
 
-    <!-- mobile specific metas
+<!-- mobile specific metas
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161411659-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', {{env('ANALYTICS_TRACKING_ID')}});
+    </script>
     <!-- CSS
     ================================================== -->
     <link rel="stylesheet" href="{{asset('blog/css/base.css')}}">
@@ -28,40 +37,41 @@
     <link rel="shortcut icon" href="{{asset('blog/favicon1.png')}}" type="image/x-icon">
     <link rel="icon" href="{{asset('blog/favicon1.png')}}" type="image/x-icon">
 
-    @yield('styles')
+@yield('styles')
+
 
 </head>
 
 <body id="top">
 
-    <!-- pageheader
-    ================================================== -->
-    @yield('header')
-    <!-- end s-pageheader -->
+<!-- pageheader
+================================================== -->
+@yield('header')
+<!-- end s-pageheader -->
 
 
-    <!-- s-content
-    ================================================== -->
+<!-- s-content
+================================================== -->
 {{--    <section class="s-content">--}}
-        @yield('content')
+@yield('content')
 {{--    </section>--}}
-    <!-- s-content -->
+<!-- s-content -->
 
 
-    <!-- s-extra
-    ================================================== -->
+<!-- s-extra
+================================================== -->
 {{--        @include('blog.partials.extra')--}}
-    <!-- end s-extra -->
+<!-- end s-extra -->
 
 
-    <!-- s-footer
-    ================================================== -->
-    @include('blog.partials.footer')
-    <!-- end s-footer -->
+<!-- s-footer
+================================================== -->
+@include('blog.partials.footer')
+<!-- end s-footer -->
 
 
-    <!-- preloader
-    ================================================== -->
+<!-- preloader
+================================================== -->
 {{--    <div id="preloader">--}}
 {{--        <div id="loader">--}}
 {{--            <div class="line-scale">--}}
@@ -75,11 +85,11 @@
 {{--    </div>--}}
 
 
-    <!-- Java Script
+<!-- Java Script
     ================================================== -->
-    <script src="{{asset('blog/js/jquery-3.2.1.min.js')}}"></script>
-    <script src="{{asset('blog/js/plugins.js')}}"></script>
-    <script src="{{asset('blog/js/main.js')}}"></script>
+<script src="{{asset('blog/js/jquery-3.2.1.min.js')}}"></script>
+<script src="{{asset('blog/js/plugins.js')}}"></script>
+<script src="{{asset('blog/js/main.js')}}"></script>
 
 @yield('script')
 
