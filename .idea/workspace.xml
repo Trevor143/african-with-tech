@@ -2,45 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdce11f5-220b-4406-8b7e-e0690119b3fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/blog/images/icons/icon-arrow-left-w.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/blog/images/icons/icon-arrow-left.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/blog/images/icons/icon-arrow-right-w.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/blog/images/icons/icon-arrow-right.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/blog/images/icons/icon-arrow-up.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/blog/images/icons/icon-link.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/blog/images/icons/icon-mail.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/blog/images/icons/icon-quote.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/blog/images/icons/icon-search.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/blog/images/icons/icon-video.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/blog/images/icons/png/icon-arrow-left-w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/blog/images/icons/png/icon-arrow-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/blog/images/icons/png/icon-arrow-right-w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/blog/images/icons/png/icon-arrow-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/blog/images/icons/png/icon-arrow-up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/blog/images/icons/png/icon-link.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/blog/images/icons/png/icon-mail.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/blog/images/icons/png/icon-quote.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/blog/images/icons/png/icon-search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/blog/images/icons/png/icon-video.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/awtblog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/awtblog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MyAccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MyAccountController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/BackpackUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BackpackUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/backpack/base.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/backpack/base.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/eye.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blog/article.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/article.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blog/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/category.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blog/layout/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/layout/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blog/partials/featured_posts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/partials/featured_posts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blog/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/user.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/backpack/base/my_account.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/backpack/base/my_account.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -230,16 +192,16 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Projects\awtblog\public\blog" />
-      <recent name="D:\Projects\awtblog\public\storage" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projects\awtblog\public\blog\images" />
       <recent name="D:\Projects\awtblog\public\images" />
       <recent name="D:\Projects\awtblog\public\admin" />
       <recent name="D:\Projects\awtblog\public" />
       <recent name="D:\Projects\awtblog\public\blog" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\awtblog\public\blog" />
+      <recent name="D:\Projects\awtblog\public\storage" />
     </key>
   </component>
   <component name="RunDashboard">
