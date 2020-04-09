@@ -166,6 +166,7 @@ return [
          * Package Service Providers...
          */
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+        Spatie\Analytics\AnalyticsServiceProvider::class,
 
 
         /*
@@ -236,6 +237,9 @@ return [
         'JsonLd'   => Artesaos\SEOTools\Facades\JsonLd::class,
         // or
         'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
+
+        //analytics
+        'Analytics' => Spatie\Analytics\AnalyticsFacade::class,
 
     ],
 

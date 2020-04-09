@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdce11f5-220b-4406-8b7e-e0690119b3fa" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/awtblog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/awtblog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/layout/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/layout/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/partials/featured_posts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/partials/featured_posts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+>>>>>>> analytics
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -172,6 +186,15 @@
       <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
       <path value="$PROJECT_DIR$/vendor/phar-io/version" />
       <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/vendor/google/apiclient" />
+      <path value="$PROJECT_DIR$/vendor/google/apiclient-services" />
+      <path value="$PROJECT_DIR$/vendor/google/auth" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-analytics" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
     </include_path>
   </component>
   <component name="ProjectId" id="1YTGvVlgAy5DlKJpt7XlR9M1Ge3" />
@@ -180,7 +203,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/blog/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -192,12 +215,20 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+<<<<<<< HEAD
+=======
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\awtblog\storage\app\analytics" />
+      <recent name="D:\Projects\awtblog\public\blog" />
+      <recent name="D:\Projects\awtblog\public\storage" />
+    </key>
+>>>>>>> analytics
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\awtblog" />
       <recent name="D:\Projects\awtblog\public\blog\images" />
       <recent name="D:\Projects\awtblog\public\images" />
       <recent name="D:\Projects\awtblog\public\admin" />
       <recent name="D:\Projects\awtblog\public" />
-      <recent name="D:\Projects\awtblog\public\blog" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projects\awtblog\public\blog" />
@@ -251,7 +282,7 @@
       <workItem from="1585642610284" duration="100000" />
       <workItem from="1585744143024" duration="35905000" />
       <workItem from="1586076737475" duration="11430000" />
-      <workItem from="1586246560931" duration="8341000" />
+      <workItem from="1586246560931" duration="19314000" />
     </task>
     <servers />
   </component>

@@ -12,6 +12,8 @@ use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\TwitterCard;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\URL;
+use Spatie\Analytics\Analytics;
+use Spatie\Analytics\Period;
 
 class BlogController extends Controller
 {
@@ -133,5 +135,10 @@ class BlogController extends Controller
 
         TwitterCard::setTitle($entity->name);
         TwitterCard::setUrl(Url::current());
+    }
+
+    public function trending()
+    {
+        $trends = app('App\Services\Trending')->week();
     }
 }
