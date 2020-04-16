@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Http\Composers\ExtrasComposer;
 use App\Http\Composers\FeaturedComposer;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -26,5 +27,7 @@ class ViewServiceProvider extends ServiceProvider
     public function boot()
     {
         View::composer(['blog.partials.featured'], FeaturedComposer::class);
+        View::composer(['blog.partials.extra'], ExtrasComposer::class);
+
     }
 }

@@ -10,16 +10,10 @@
 
             <ul class="header__social">
                 <li>
-                    <a href="#0"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/Mukwz"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 </li>
                 <li>
-                    <a href="#0"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                    <a href="#0"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                    <a href="#0"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/that_fat_boy_on_a_mission_/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 </li>
             </ul> <!-- end header__social -->
 

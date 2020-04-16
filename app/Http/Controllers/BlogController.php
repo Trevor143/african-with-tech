@@ -6,6 +6,7 @@ use App\Article;
 use App\Category;
 use App\Models\BackpackUser;
 use App\Tag;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\OpenGraph;
@@ -24,11 +25,17 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $articles = Article::where('status', 'PUBLISHED')->orderBy('created_at', 'desc')->get();
+        $articles = Article::where('status', 'PUBLISHED')->orderBy('created_at', 'desc')->paginate(6);
 
         SEOMeta::setTitle('Home');
-        SEOMeta::setDescription('Know it even when it doesnt help');
-        SEOMeta::setCanonical(Url::current());
+
+        OpenGraph::setTitle('Home');
+        OpenGraph::addImage(asset('logo2.png'));
+
+        TwitterCard::setTitle('Home');
+        TwitterCard::setImage(url(asset('logo2.png')));
+
+
 
         return view('blog.index')->with('articles', $articles);
     }
@@ -106,18 +113,15 @@ class BlogController extends Controller
         if ($article->image)
             OpenGraph::addImage(\url($article->image));
         else
-            OpenGraph::addImage(asset('logo.png'));
-
+            OpenGraph::addImage(asset('logo2.png'));
 
         TwitterCard::setDescription($article->description);
         TwitterCard::setTitle($article->title);
         TwitterCard::setUrl(Url::current());
-        TwitterCard::setType('article');
         if ($article->image)
-            TwitterCard::addImage(\url($article->image));
+            TwitterCard::setImage(\url($article->image));
         else
-            TwitterCard::addImage(asset('logo.png'));
-        TwitterCard::setSite('@Mukwz');
+            TwitterCard::setImage(asset('logo2.png'));
     }
 
     public function generalSEO($entity)
@@ -131,14 +135,14 @@ class BlogController extends Controller
         if ($entity->image)
             OpenGraph::addImage(asset('storage/'.$entity->image->imageable_url));
         else
-            OpenGraph::addImage(asset('logo.png'));
+            OpenGraph::addImage(asset('logo2.png'));
 
         TwitterCard::setTitle($entity->name);
         TwitterCard::setUrl(Url::current());
+        if ($entity->image)
+            TwitterCard::setImage(asset('storage/'.$entity->image->imageable_url));
+        else
+            TwitterCard::setImage(asset('logo2.png'));
     }
 
-    public function trending()
-    {
-        $trends = app('App\Services\Trending')->week();
-    }
 }

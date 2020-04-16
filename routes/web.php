@@ -11,7 +11,9 @@
 |
 */
 
+use App\Article;
 use App\Category;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\Storage;
 use Spatie\Analytics\AnalyticsFacade as Analytics;
 use Spatie\Analytics\Period;
@@ -31,10 +33,6 @@ Route::get('/tag/{tag}', 'BlogController@tag')->name('tag');
 Route::get('/user/{user}', 'BlogController@user')->name('user');
 
 Route::get('main', function ($limit =5){
-
-    $pages = Analytics::fetchMostVisitedPages(Period::days(7), $limit);
-
-    dd($pages);
 
 });
 

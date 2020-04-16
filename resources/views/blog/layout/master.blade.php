@@ -19,7 +19,7 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', {{env('ANALYTICS_TRACKING_ID')}});
+        gtag('config', '{{env('ANALYTICS_TRACKING_ID')}}');
     </script>
     <!-- CSS
     ================================================== -->
@@ -34,8 +34,8 @@
 
     <!-- favicons
     ================================================== -->
-    <link rel="shortcut icon" href="{{asset('blog/favicon1.png')}}" type="image/x-icon">
-    <link rel="icon" href="{{asset('blog/favicon1.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{asset('faviconstable.ico')}}" type="image/x-icon">
+    <link rel="icon" href="{{asset('faviconstable.ico')}}" type="image/x-icon">
 
 @yield('styles')
 
@@ -60,7 +60,7 @@
 
 <!-- s-extra
 ================================================== -->
-{{--        @include('blog.partials.extra')--}}
+        @include('blog.partials.extra')
 <!-- end s-extra -->
 
 

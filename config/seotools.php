@@ -41,8 +41,7 @@ return [
             'url'         => null, // Set null for using Url::current(), set false to total remove
             'type'        => 'website',
             'site_name'   => 'african_with_tech',
-//            'image'       => asset('logo.png'),
-//            'images'      => [asset('logo.svg')],
+//            'image'       => asset('logo2.png'),
         ],
     ],
     'twitter' => [
@@ -51,7 +50,10 @@ return [
          */
         'defaults' => [
             'card'        => 'summary_large_image',
-//            'images'       =>  asset('logo.png'),
+            'title'       => 'african_with_tech', // set false to total remove
+            'description' => 'Viewing everything from a different perspective', // set false to total remove
+//            'image'       => asset('logo2.png'),
+            'creator'        => '@Mukwz'
             //'site'        => '@LuizVinicius73',
         ],
     ],

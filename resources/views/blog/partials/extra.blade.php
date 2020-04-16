@@ -6,88 +6,51 @@
             <h3>Popular Posts</h3>
 
             <div class="block-1-2 block-m-full popular__posts">
-                <article class="col-block popular__post">
-                    <a href="#0" class="popular__thumb">
-                        <img src="images/thumbs/small/wheel-150.jpg" alt="">
-                    </a>
-                    <h5><a href="#0">Visiting Theme Parks Improves Your Health.</a></h5>
-                    <section class="popular__meta">
-                        <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
-                        <span class="popular__date"><span>on</span> <time datetime="2017-12-19">Dec 19, 2017</time></span>
-                    </section>
-                </article>
-                <article class="col-block popular__post">
-                    <a href="#0" class="popular__thumb">
-                        <img src="images/thumbs/small/shutterbug-150.jpg" alt="">
-                    </a>
-                    <h5><a href="#0">Key Benefits Of Family Photography.</a></h5>
-                    <section class="popular__meta">
-                        <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
-                        <span class="popular__date"><span>on</span> <time datetime="2017-12-18">Dec 18, 2017</time></span>
-                    </section>
-                </article>
-                <article class="col-block popular__post">
-                    <a href="#0" class="popular__thumb">
-                        <img src="images/thumbs/small/cookies-150.jpg" alt="">
-                    </a>
-                    <h5><a href="#0">Absolutely No Sugar Oatmeal Cookies.</a></h5>
-                    <section class="popular__meta">
-                        <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
-                        <span class="popular__date"><span>on</span> <time datetime="2017-12-16">Dec 16, 2017</time></span>
-                    </section>
-                </article>
-                <article class="col-block popular__post">
-                    <a href="#0" class="popular__thumb">
-                        <img src="images/thumbs/small/beetle-150.jpg" alt="">
-                    </a>
-                    <h5><a href="#0">Throwback To The Good Old Days.</a></h5>
-                    <section class="popular__meta">
-                        <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
-                        <span class="popular__date"><span>on</span> <time datetime="2017-12-16">Dec 16, 2017</time></span>
-                    </section>
-                </article>
-                <article class="col-block popular__post">
-                    <a href="#0" class="popular__thumb">
-                        <img src="images/thumbs/small/tulips-150.jpg" alt="">
-                    </a>
-                    <h5><a href="#0">10 Interesting Facts About Caffeine.</a></h5>
-                    <section class="popular__meta">
-                        <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
-                        <span class="popular__date"><span>on</span> <time datetime="2017-12-14">Dec 14, 2017</time></span>
-                    </section>
-                </article>
-                <article class="col-block popular__post">
-                    <a href="#0" class="popular__thumb">
-                        <img src="images/thumbs/small/salad-150.jpg" alt="">
-                    </a>
-                    <h5><a href="#0">Healthy Mediterranean Salad Recipes</a></h5>
-                    <section class="popular__meta">
-                        <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
-                        <span class="popular__date"><span>on</span> <time datetime="2017-12-12">Dec 12, 2017</time></span>
-                    </section>
-                </article>
+                @forelse($articles as $article)
+                    <article class="col-block popular__post">
+                        @if($article->image)
+                            <a href="{{route('article.show', $article->slug)}}" class="popular__thumb">
+                                <img src="{{Storage::disk('front')->url($article->image)}} " alt="Post image">
+                            </a>
+                        @else
+                            <a href="{{route('article.show', $article->slug)}}" class="popular__thumb">
+                                <img src="{{asset('logo2.png')}} " alt="Post image">
+                            </a>
+                        @endif
+                        <h5><a href="{{route('article.show', $article->slug)}}">{{\Illuminate\Support\Str::limit($article->title, 70)}}</a></h5>
+                        <section class="popular__meta">
+                            <span class="popular__author"><span>By</span> <a href="#0"> {{$article->user->name}} </a></span>
+                            <span class="popular__date"><span>on</span> <time datetime="2017-12-19">{{$article->created_at->isoFormat('MMMM D, YYYY')}}</time></span>
+                        </section>
+                    </article>
+                @empty
+                    <article class="col-block popular__post">
+                        <a href="#0" class="popular__thumb">
+                            <img src="{{asset('logo2.png')}}" alt="Post image">
+                        </a>
+                        <h5><a href="#0">No posts avaliable</a></h5>
+                        <section class="popular__meta">
+                            <span class="popular__author"><span>By</span> <a href="#0"> african_with_tech</a></span>
+                            <span class="popular__date"><span>on</span> <time datetime="2017-12-19">{{\Carbon\Carbon::today()->isoFormat('MMMM D, YYYY')}}</time></span>
+                        </section>
+                    </article>
+                @endforelse
             </div> <!-- end popular_posts -->
         </div> <!-- end popular -->
 
         <div class="col-four md-six tab-full about">
-            <h3>About Philosophy</h3>
+            <h3>About african_with_tech</h3>
 
             <p>
-                Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero malesuada feugiat. Pellentesque in ipsum id orci porta dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada.
+                african_with_tech is a platform to easily view any kind of technology, new or old in an African perspective for the common person.
             </p>
 
             <ul class="about__social">
                 <li>
-                    <a href="#0"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/Mukwz"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 </li>
                 <li>
-                    <a href="#0"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                    <a href="#0"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                    <a href="#0"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/that_fat_boy_on_a_mission_/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 </li>
             </ul> <!-- end header__social -->
         </div> <!-- end about -->
@@ -99,17 +62,11 @@
             <h3>Tags</h3>
 
             <div class="tagcloud">
-                <a href="#0">Salad</a>
-                <a href="#0">Recipe</a>
-                <a href="#0">Places</a>
-                <a href="#0">Tips</a>
-                <a href="#0">Friends</a>
-                <a href="#0">Travel</a>
-                <a href="#0">Exercise</a>
-                <a href="#0">Reading</a>
-                <a href="#0">Running</a>
-                <a href="#0">Self-Help</a>
-                <a href="#0">Vacation</a>
+                @forelse($tags as $tag)
+                    <a href="#0">{{$tag->name}}</a>
+                @empty
+                    <a href="#0">Tags</a>
+                @endforelse
             </div> <!-- end tagcloud -->
         </div> <!-- end tags -->
     </div> <!-- end tags-wrap -->

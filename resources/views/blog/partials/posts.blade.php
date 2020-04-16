@@ -72,3 +72,4 @@
         @endforelse
     </div> <!-- end masonry -->
 </div> <!-- end masonry-wrap -->
+
