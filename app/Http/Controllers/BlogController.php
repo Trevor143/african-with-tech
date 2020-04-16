@@ -102,6 +102,7 @@ class BlogController extends Controller
         SEOMeta::setDescription($article->description);
         SEOMeta::setCanonical(Url::current());
         SEOMeta::addMeta('article:published_time', $article->created_at->toW3CString(), 'property');
+        SEOMeta::addMeta('article:modified_time', $article->updated_at->toW3CString(), 'property');
         SEOMeta::addMeta('article:author', $article->user->name, 'property');
         if ($article->tags)
             SEOMeta::addKeyword($article->tags->map(function ($tag){return $tag->name;})->toArray());
@@ -109,7 +110,7 @@ class BlogController extends Controller
         OpenGraph::setDescription($article->description);
         OpenGraph::setTitle($article->title);
         OpenGraph::setUrl(Url::current());
-        OpenGraph::addProperty('type', 'article');
+        OpenGraph::setType('article');
         if ($article->image)
             OpenGraph::addImage(\url($article->image));
         else
