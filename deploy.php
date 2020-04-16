@@ -12,6 +12,10 @@ set('repository', 'git@github.com:Trevor143/african-with-tech.git');
 // [Optional] Allocate tty for git clone. Default value is false.
 set('git_tty', true);
 
+
+//set('ssh_multiplexing', false);
+
+
 // Shared files/dirs between deploys
 add('shared_files', []);
 add('shared_dirs', []);
@@ -25,7 +29,7 @@ add('writable_dirs', []);
 host('142.93.115.244')
     ->user('deployer')
     ->identityFile('~/.ssh/deployerkey')
-    ->set('deploy_path', '/var/www/africanwith.tech');
+    ->set('deploy_path', '/var/www/html/africanwith.tech');
 
 // Tasks
 
