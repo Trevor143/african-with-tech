@@ -26,9 +26,9 @@ add('writable_dirs', []);
 
 // Hosts
 
-host('142.93.115.244')
-    ->user('deployer')
-    ->identityFile('~/.ssh/deployerkey')
+host('africanwith.tech')
+//    ->user('deployer')
+//    ->identityFile('~/.ssh/deployerkey')
     ->set('deploy_path', '/var/www/html/africanwith.tech');
 
 // Tasks
