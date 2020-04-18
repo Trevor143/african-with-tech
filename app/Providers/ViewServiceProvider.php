@@ -27,7 +27,7 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::share('items', MenuItem::all());
+//        View::share('items', MenuItem::all());
         View::composer(['blog.partials.featured'], FeaturedComposer::class);
         View::composer(['blog.partials.extra'], ExtrasComposer::class);
 
