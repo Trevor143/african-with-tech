@@ -4,7 +4,6 @@
 namespace App\Http\Composers;
 
 use App\Article;
-use App\Tag;
 use Illuminate\View\View;
 
 class FeaturedComposer

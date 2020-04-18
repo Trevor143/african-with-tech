@@ -17,7 +17,7 @@
                 </li>
             </ul> <!-- end header__social -->
 
-            @include('blog.partials.main_menu', ['items'=> $items])
+            @include('blog.partials.main_menu')
 
         </div> <!-- header-content -->
     </header> <!-- header -->
