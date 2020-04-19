@@ -13,10 +13,9 @@ class ExtrasComposer
     public function compose(View $view)
     {
         $tags = Tag::all();
-//        $latestArticles = Article::all()->take(4);
         $trends = app('App\Services\Trending')->week();
-//        $latestArticles = new Collection();
-        $latestArticles = Article::all()->take(4);
+        $latestArticles = new Collection();
+//        $latestArticles = Article::all()->take(4);
 
         foreach ($trends as $trend) {
             $url = $trend['url'];

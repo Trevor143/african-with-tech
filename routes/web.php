@@ -18,10 +18,6 @@ use Illuminate\Support\Facades\Storage;
 use Spatie\Analytics\AnalyticsFacade as Analytics;
 use Spatie\Analytics\Period;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/', 'BlogController@index')->name('home');
 
 Route::get('/article/{article}', 'BlogController@show')->name('article.show');
