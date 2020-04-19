@@ -29,6 +29,5 @@ Route::get('/tag/{tag}', 'BlogController@tag')->name('tag');
 Route::get('/user/{user}', 'BlogController@user')->name('user');
 
 Route::get('main', function ($limit =5){
-
 });
 

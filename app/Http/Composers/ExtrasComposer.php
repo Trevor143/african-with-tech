@@ -17,11 +17,11 @@ class ExtrasComposer
 //        $latestArticles = new Collection();
         $latestArticles = Article::all()->take(4);
 
-        foreach ($trends as $trend) {
-            $url = $trend['url'];
-            $article = Article::findBySlug($url);
-            $latestArticles->push($article);
-        }
+//        foreach ($trends as $trend) {
+//            $url = $trend['url'];
+//            $article = Article::findBySlug($url);
+//            $latestArticles->push($article);
+//        }
 
         $view
             ->with('tags', $tags)
