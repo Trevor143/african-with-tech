@@ -20,7 +20,8 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.2",
         "laravel/tinker": "^2.0",
-        "spatie/laravel-analytics": "^3.9"
+        "spatie/laravel-analytics": "^3.9",
+        "unisharp/laravel-filemanager": "^2.0"
     },
     "require-dev": {
         "backpack/generators": "^2.0",
