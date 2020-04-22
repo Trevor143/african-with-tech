@@ -111,7 +111,7 @@ class ArticleController extends ArticleCrudController
                 'name' => 'content',
                 'label' => 'Content',
                 'type' => 'ckeditor',
-                'extra_plugins' => ['widget', 'colorbutton', 'justify', 'find', 'codesnippet', 'embed', 'iframe' ],
+                'extra_plugins' => ['image2','widget', 'colorbutton', 'justify', 'find', 'codesnippet', 'embed', 'iframe' ],
                 'options' => [
                     'autoGrow_minHeight' => 200,
                     'autoGrow_bottomSpace' => 50,

@@ -16,3 +16,4 @@ yarn-error.log
 /docker/nginx/default.conf
 .idea/
 storage/app/analytics/african-with-tech-production-32aedc31c3da.json
+config/analytics.php
