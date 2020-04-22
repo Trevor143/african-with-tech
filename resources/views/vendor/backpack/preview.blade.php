@@ -24,13 +24,15 @@
             </div> <!-- end s-content__header -->
 
             <div class="s-content__media col-full">
-                <div class="s-content__post-thumb">
-                    <img src="{{Storage::disk('front')->url($article->image)}}"
-                         srcset="{{Storage::disk('front')->url($article->image)}} 2000w,
-                                 {{Storage::disk('front')->url($article->image)}} 1000w,
-                                 {{Storage::disk('front')->url($article->image)}} 500w"
-                         sizes="(max-width: 2000px) 100vw, 2000px" alt="" >
-                </div>
+                @if($article->image)
+                    <div class="s-content__post-thumb">
+                        <img src="{{Storage::disk('front')->url($article->image)}}"
+                             srcset="{{Storage::disk('front')->url($article->image)}} 2000w,
+                                     {{Storage::disk('front')->url($article->image)}} 1000w,
+                                     {{Storage::disk('front')->url($article->image)}} 500w"
+                             sizes="(max-width: 2000px) 100vw, 2000px" alt="Article image" >
+                    </div>
+                @endif
             </div> <!-- end s-content__media -->
 
             <div class="col-full s-content__main">
@@ -46,11 +48,16 @@
                                 <a href="#0">{{$tag->name}}</a>
                             @endforeach
                     </span>
-                    </p>@endif
+                    </p>
+            @endif
             <!-- end s-content__tags -->
 
                 <div class="s-content__author">
-                    <img src="{{Storage::disk('backpack')->url($article->user->image->imageable_url)}}" alt="">
+                    @if($article->user->image)
+                        <img src="{{asset('storage/'.$article->user->image->imageable_url)}}" alt="{{$article->user->name}}'s picture">
+                    @else
+                        <img src="{{asset('user_icon.png')}}" alt="{{$article->user->name}}'s picture">
+                    @endif
                     <div class="s-content__author-about">
                         <h4 class="s-content__author-name">
                             <a href="{{route('user', $article->user->name)}}">{{$article->user->name}}</a>
